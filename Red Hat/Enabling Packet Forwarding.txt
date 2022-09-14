@@ -1,0 +1,7 @@
+# This will persist after reboot
+vim /etc/sysctl.conf
+# (add a line)
+	net.ipv4.ip_forward=1 
+
+# To check the result after the reboot you should see the "1" as the output of the following command
+cat /proc/sys/net/ipv4/ip_forward 

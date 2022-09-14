@@ -1,0 +1,8 @@
+# Check if the config-manager is installed
+dnf config-manager
+
+# Add the Repo
+dnf config-manager --add-repo https://
+
+#Check if everything is alright
+dnf update

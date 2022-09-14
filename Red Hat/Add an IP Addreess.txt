@@ -1,0 +1,13 @@
+# Adding IP Address Statically to the interface
+## Get the connection infos
+nmcli connection show
+nmcli connection modify System\ eth1 +ipv4.address 10.0.0.5/24
+
+## Reload the config
+nmcli connection reload 
+
+## show the result
+nmclo connection show System\ eth1
+
+## IPv6
+nmcli connection modify System\ eth1 ipv6.method manual ipv6.addresses fd:00:1:: 

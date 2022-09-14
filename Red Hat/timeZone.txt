@@ -1,0 +1,11 @@
+#Set the time zone
+timedatectl list-timezones
+timedatectl set-timezone 'Australia/Melbourne'
+timedatectl set-ntp yes
+dnf install chrony
+systemctl status chronyd
+# Checking if the NTP is working
+timedatectl
+
+#or
+timedatectl |grep 'NTP service'
